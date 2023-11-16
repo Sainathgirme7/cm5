@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block title %}Product Prediction  {% endblock %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Prediction</title>
+    <style>
+        body {
+            background-image: url('static/images/logo1.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center; 
+            margin: 0;
+            
+           
+        }
+        .form-blur {
+            background-color: rgba(255, 255, 255, 0.2); /* Adjust the background color and opacity as needed */
+            padding: 20px; /* Adjust padding as needed */
+            border-radius: 10px; /* Adjust border-radius as needed */
+        }
+        label {
+            font-weight: bold;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container" id='predict'>
+        {% if prediction_text %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <h2>{{ prediction_text }}</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+    </div>
+    
+
+
+
+<div class="form-blur m-5" style="padding-left: 10%; padding-right: 10%;">
+  <h1 class="text-center">Product Prediction</h1>
+  <form action="/predict" method="POST">
+      <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select class="form-control" id="gender" name="gen_der">
+              <option value="1">Male</option>
+              <option value="0">Female</option>
+          </select>
+      </div>
+      
+      <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" class="form-control" id="age" name="age">
+      </div>
+
+      <div class="form-group">
+          <label for="marital_status">Marital Status:</label>
+          <select class="form-control" id="marital_status" name="marital_status">
+              <option value="1">Married</option>
+              <option value="0">Single</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label for="state">State:</label>
+          <select class="form-control" id="state" name="state">
+              <option value="0">Andhra Pradesh</option>
+              <option value="1">Bihar</option>
+              <option value="2">Delhi</option>
+              <option value="3">Gujarat</option>
+              <option value="4">Haryana</option>
+              <option value="5">Himachal Pradesh</option>
+              <option value="6">Jharkhand</option>
+              <option value="7">Karnataka</option>
+              <option value="8">Kerala</option>
+              <option value="9">Madhya Pradesh</option>
+              <option value="10">Maharashtra</option>
+              <option value="11">Punjab</option>
+              <option value="12">Rajasthan</option>
+              <option value="13">Telangana</option>
+              <option value="14">Uttar Pradesh</option>
+              <option value="15">Uttarakhand</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="occupation">Occupation:</label>
+          <select class="form-control" id="occupation" name="occupation">
+              <option value="0">Agriculture</option>
+              <option value="1">Automobile</option>
+              <option value="2">Aviation</option>
+              <option value="3">Banking</option>
+              <option value="4">Chemical</option>
+              <option value="5">Construction</option>
+              <option value="6">Food Processing</option>
+              <option value="7">Govt</option>
+              <option value="8">Healthcare</option>
+              <option value="9">Hospitality</option>
+              <option value="10">IT Sector</option>
+              <option value="11">Lawyer</option>
+              <option value="12">Media</option>
+              <option value="13">Retail</option>
+              <option value="14">Textile</option>
+          </select>
+      </div>
+                  
+      <div class="form-group">
+          <label for="amount">Purchasing Amount:</label>
+          <input type="number" class="form-control" id="amount" name="amount">
+      </div>
+      
+      <!-- Add more input fields for other features -->
+      <button type="submit"  value="model.classify()" class="btn btn-primary">Predict</button>
+  </form>
+
+</div>
+  
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+{% endblock %}

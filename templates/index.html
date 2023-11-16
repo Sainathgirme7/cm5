@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block title %}Diwali Product Prediction Machine Learning  {% endblock %}
+{% block content %}
+<style>
+    body {
+        color:black;
+        
+       
+    }
+   p{
+    color:black;
+   }
+</style>
+<body>
+
+    <div class="container-fluid">
+        <img src="static/images/logo3.png" class="img-fluid" alt="Responsive Image">
+      </div>
+    
+
+<div class=" m-5" >
+
+   
+<div>
+    <h1>Welcome to our groundbreaking Diwali Product Prediction Machine Learning project!</h1>
+    <p style="color:black">This innovative initiative harnesses the power of advanced data analytics to predict the most optimal products for both individuals and companies during the festive Diwali season. With a comprehensive dataset encompassing key attributes such as gender, age, marital status, state, occupation, and purchase amount, our model is designed to offer targeted and personalized recommendations.</p>
+</div>
+
+<div>
+    <h2>Project Overview:</h2>
+    <h3>Objective:</h3>
+    <p style="color:black">The primary objective of our Diwali Product Prediction project is to leverage machine learning techniques for predicting the ideal products based on a variety of crucial factors. By delving into the intricacies of individual and corporate preferences, we aim to enhance the Diwali shopping experience for everyone involved.</p>
+
+    <h3>Key Features:</h3>
+    <ul>
+        <li><strong>Rich Dataset:</strong> Our project is fueled by a robust dataset compiled from diverse sources, capturing a spectrum of consumer attributes and purchasing behaviors during the festive season.</li>
+        <li><strong>Predictive Analytics:</strong> Employing cutting-edge machine learning algorithms, our model analyzes the dataset to generate accurate predictions regarding the most suitable products.</li>
+        <li><strong>Critical Factors Considered:</strong>
+            <ul>
+                <li><strong>Gender:</strong> Understanding the influence of gender on product preferences.</li>
+                <li><strong>Age:</strong> Tailoring recommendations based on age demographics.</li>
+                <li><strong>Marital Status:</strong> Incorporating marital status for nuanced and personalized suggestions.</li>
+                <li><strong>State:</strong> Recognizing regional variations in preferences to refine recommendations.</li>
+                <li><strong>Occupation:</strong> Factoring in professional backgrounds to offer tailored product selections.</li>
+                <li><strong>Purchase Amount:</strong> Analyzing spending patterns to optimize product recommendations.</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h2>Model Performance:</h2>
+    <p>Our machine learning model has been trained and tested to ensure accurate predictions. Here are the performance metrics:</p>
+
+    <ul>
+        <li><strong>Training Data Accuracy:</strong> <strong><span style="color:Green;">{{ "%.2f"|format(training_data_accuracy) }}<span></strong></li>
+
+        <li><strong>Test Data Accuracy:</strong> <strong><span style="color:Green;">{{ "%.2f"|format(test_data_accuracy) }}<span></strong></li>
+    </ul>
+</div>
+
+<div>
+    <h2>Benefits for Individuals and Companies:</h2>
+    <h3>Individuals:</h3>
+    <ul>
+        <li>Personalized product recommendations aligned with personal preferences and characteristics.</li>
+        <li>Streamlined and enjoyable shopping experiences with relevant suggestions.</li>
+    </ul>
+
+    <h3>Companies:</h3>
+    <ul>
+        <li>Optimized product offerings based on predicted consumer preferences, enhancing market competitiveness.</li>
+        <li>Improved marketing strategies targeting specific demographics more effectively.</li>
+        <li>Enhanced inventory management by aligning with anticipated demand.</li>
+    </ul>
+</div>
+
+<div>
+    <h2>Why Our Project Matters:</h2>
+    <ul>
+        <li><strong>Precision and Accuracy:</strong> Our machine learning model prioritizes accuracy, ensuring reliable predictions that resonate with individual and corporate needs.</li>
+        <li><strong>Adaptability:</strong> The model is adaptable to evolving market trends, allowing for continuous optimization and relevance.</li>
+        <li><strong>User-Centric Approach:</strong> We aim to deliver a user-centric experience, providing valuable insights to enhance the Diwali shopping journey for both individuals and companies.</li>
+    </ul>
+</div>
+</div>
+
+
+
+
+</body>
+{% endblock %}
